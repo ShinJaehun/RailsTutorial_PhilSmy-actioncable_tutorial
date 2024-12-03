@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col">
+        <%= book.title %>
+    </div>
+    <div class="col">
+        <%= book.status&.titleize %>
+        <!-- 왜 여기서 '&'를 사용하나요? -->
+        <!-- 아... nil이면 오류를 발생시키는데... '&'가 있으면 nil일 때 nil 반환? -->
+    </div>
+    <div class="col">
+        <%= book.status_date %>
+    </div>
+</div>
